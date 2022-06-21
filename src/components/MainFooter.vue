@@ -3,10 +3,10 @@
     <div class="row ">
       <div class="col">
         <div class="row mt-3">
-          <div v-for="(array,i) in footerArray" class="col-4" :key="i">
+          <div v-for="(array,i) in footerArray" class="col-4" :key="`${i}peppino`">
           <h3>{{array.title}}</h3>
           <ul class="list-unstyled">
-            <li v-for="content in footerArray[i].valueArray" :key="content">{{content}}</li>
+            <li v-for="(content,i) in footerArray[i].valueArray" :key="`${content}${i}`">{{content}}</li>
           </ul>
           </div>
           
@@ -97,7 +97,7 @@ export default {
     display: flex;
     justify-content: center;
     img{
-        height: 150%;
+        height: 160%;
         
     }
   }

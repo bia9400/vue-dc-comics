@@ -4,6 +4,8 @@
     <TheContent></TheContent>
     <BlueBanner></BlueBanner>
     <MainFooter></MainFooter>
+    <SocialFooter></SocialFooter>
+    
   </div>
 </template>
 
@@ -13,13 +15,18 @@ import TheHeader from './components/TheHeader.vue'
 import TheContent from './components/TheContent.vue'
 import BlueBanner from './components/BlueBanner.vue'
 import MainFooter from './components/MainFooter.vue'
+import SocialFooter from './components/SocialFooter.vue'
+
 export default {
   name: 'App',
   components: {
     TheHeader,
     TheContent,
     BlueBanner,
-    MainFooter
+    MainFooter,
+    SocialFooter
+    
+    
     
   }
 }

@@ -8,7 +8,7 @@
       </div>
       <div class="col-7 d-flex  " >
         <ul class="d-flex list-unstyled">
-          <li class="text-uppercase px-3 align-self-center" v-for="link in linkList" :key="link"><a href="#">{{link}}</a></li>
+          <li class="text-uppercase px-3 align-self-center" v-for="(link,i) in linkList" :key="`${link}${i} `"><a href="#">{{link}}</a></li>
         </ul>
       </div>
     </div>
