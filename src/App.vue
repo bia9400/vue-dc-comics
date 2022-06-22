@@ -17,6 +17,7 @@ import BlueBanner from './components/BlueBanner.vue'
 import MainFooter from './components/MainFooter.vue'
 import SocialEndingr from './components/SocialEndingr.vue'
 
+
 export default {
   name: 'App',
   components: {
