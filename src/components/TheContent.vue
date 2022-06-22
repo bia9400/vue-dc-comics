@@ -1,8 +1,11 @@
 <template>
-    <div  class="ps-4 myBanner py-5">
-       <div class="container text-center">
-        <div class="row row-cols-6 ">
-        <div v-for="input in arrayFumetti" :key="input.thumb" class="col ">
+    <div  class=" myBanner pb-5">
+        <!-- <img class="pb-4" src="../assets/img/jumbotron.jpg" alt=""> -->
+        <JumboTrone></JumboTrone>
+       <div class="container text-center relative">
+        <div class="current-series"><h3>CURRENT SERIES</h3></div>
+        <div class="row row-cols-6 py-5">
+        <div v-for="(input,i) in arrayFumetti" :key="i" class="col ">
             <CardFumetto  :card-title="input.series" :card-img="input.thumb"></CardFumetto>
         </div>
        </div>
@@ -13,15 +16,18 @@
 
 
 <script>
+import JumboTrone from './JumboTrone.vue'
 import CardFumetto from './CardFumetto.vue'
 export default {
     components:{
         CardFumetto,
+        JumboTrone
     },
     name:"TheContent",
     
     data() {
         return {
+            mainJumboImg:"../assets/img/jumbotron.jpg",
             arrayFumetti:[
   {
     "thumb": "https://www.dccomics.com/sites/default/files/styles/covers192x291/public/comic-covers/2018/09/AC1000_DLX_162-001_HD_5ba13723281ab0.37845353.jpg?itok=ZsI-C5eX",
@@ -102,8 +108,30 @@ export default {
 </script>
 
 <style lang="scss">
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
     .myBanner{
         background-color: #1c1c1c;
-        color:white
+        color:white;
+        img{
+            width: 100%;
+        }
+        
+    }
+    .current-series{
+        background-color: #0282f9;
+        position: absolute;
+        top:0;
+        transform: translate(-5%,-50%);
+        padding: .6rem 2rem;
+        h3{
+            margin:0;
+        }
+    }
+    .relative{
+        position:relative;
     }
 </style>

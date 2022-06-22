@@ -1,10 +1,12 @@
 <template>
     <div class="ps-4 myBlueBanner py-5">
-       <div class="row text-center">
+       <div class="container">
+        <div class="row text-center">
         <div class="col" v-for="link in blueBannerLinks" :key="link.title">
-        
+        <img :src="`img`+link.img" alt="" style="aspect-ratio: 1; width: 50px;">
         {{link.title}}
         </div>
+       </div>
        </div>
     </div>
 </template>
@@ -18,23 +20,23 @@ export default {
             blueBannerLinks:[
                 {
                     title:"DIGITAL COMICS",
-                    img:"/assets/img/buy-comics-digital-comics.pmg"
+                    img:"/buy-comics-digital-comics.png"
                 },
                 {
                     title:"DC MERCHANDISE",
-                    img:"percorsoImmagine"
+                    img:"/buy-comics-merchandise.png"
                 },
                 {
                     title:"SUBSCRIPTION",
-                    img:"percorsoImmagine"
+                    img:"/buy-comics-subscriptions.png"
                 },
                 {
-                    title:"COMIC SHOP OCATOR",
-                    img:"percorsoImmagine"
+                    title:"COMIC SHOP LOCATOR",
+                    img:"/buy-comics-shop-locator.png"
                 },
                 {
                     title:"DC POWER VISA",
-                    img:"percorsoImmagine"
+                    img:"/buy-dc-power-visa.svg"
                 }
             ]
         }
